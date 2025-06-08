@@ -1733,6 +1733,7 @@ export class PosStore extends Reactive {
             employee_name: order.employee_id?.name || order.user_id?.name,
             order_note: order.general_note,
             diningModeUpdate: diningModeUpdate,
+            floating_order_name: order.floating_order_name,
         };
 
         const receipt = renderToElement("point_of_sale.OrderChangeReceipt", {

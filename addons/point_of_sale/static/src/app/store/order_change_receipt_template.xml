@@ -5,15 +5,8 @@
         <div class="pos-receipt m-0 p-0">
             <!-- Receipt Header -->
             <div class="receipt-header text-center">
-                <div class="pos-receipt-title">
-                    <t t-if="changes.diningModeUpdate">
-                        <t t-if="changes.takeaway">Dine In -&gt; Take Out</t>
-                        <t t-else="">Take Out -&gt; Dine In</t>
-                    </t>
-                    <t t-else="">
-                        <t t-if="changes.takeaway">Take Out</t>
-                        <t t-else="">Dine In</t>
-                    </t>
+                <div class="pos-receipt-title" style="font-size: 150%; color: #ff0000;">
+                    Order test
                 </div>
                 <div style="font-size: 78%;">
                     <span><t t-esc="changes.config_name"/> : <t t-esc="changes.time"/></span><br/>
@@ -22,6 +15,7 @@
                 <span class="my-4" style="font-size: 120%;">
                     <t t-if="changes.table_name">Table <strong><t t-esc="changes.table_name"/></strong></t>
                     <t t-if="changes.tracking_number" class="fw-light my-3"> # <strong><t t-esc="changes.tracking_number"/></strong></t>
+                    <t t-if="changes.floating_order_name" class="fw-light my-3">Naam: <strong><t t-esc="changes.floating_order_name"/></strong></t>
                 </span>
             </div>
             <hr style="border: none; border-top: 4px dashed black;"/>
